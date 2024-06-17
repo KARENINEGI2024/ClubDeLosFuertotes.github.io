@@ -19,7 +19,33 @@
               object-fit: contain; /* Esto asegura que la imagen mantenga sus proporciones */
               width: 100%;
           }
+          .container {
+            background-image: url('dinero.JFIF');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            color: white;
+        }
+        .money {
+            text-align: right;
+            font-size: 3em;
+        }
+        .text-left-align {
+            text-align: left;
+            text-shadow: 2px 2px 4px black;
+        }
       </style>
+       <script>
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeString = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+            document.getElementById('currentDateTime').textContent = dateTimeString;
+        }
+        
+        // Actualiza la fecha y hora al cargar la página
+        window.onload = updateDateTime;
+    </script>
+    
 </head>
 <body>
     <div class="side-bar"><!-- add class "side-bar-light" here for light version -->
@@ -135,6 +161,26 @@
             
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-sm text-left-align">
+              <h1>Monto recaudado al <span id="currentDateTime"></span></h1>
+          </div>
+          <div class="col-sm"></div>
+          <div class="col-sm money">
+              <h1>$40</h1>
+          </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
 
     <!-- javascript includes -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
