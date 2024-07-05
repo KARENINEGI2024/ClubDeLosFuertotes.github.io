@@ -35,6 +35,17 @@
             text-align: left;
             text-shadow: 2px 2px 4px black;
         }
+        #animatedImage {
+    width: 200px;
+    height: 200px;
+    transition: transform 2s ease-in-out;
+}
+        .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
       </style>
        <script>
         function updateDateTime() {
@@ -198,6 +209,10 @@
   <br>
   <br>
   <br>
+  <div class="containerr">
+    <img id="animatedImage" src="augusto.jpeg" alt="Imagen Animada">
+</div>
+<script src="script.js"></script>
 
     <!-- javascript includes -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
